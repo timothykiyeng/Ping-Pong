@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :users
   resources :comments
   resources :skill_sets
   # Routing logic: fallback requests for React Router.
