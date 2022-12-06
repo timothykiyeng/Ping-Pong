@@ -5,7 +5,8 @@ class CreateSkillSets < ActiveRecord::Migration[6.1]
       t.string :image
       t.string :category
       t.string :description
-      t.boolean :is_favorite
+      t.boolean :is_favorite, null: false, default: true
+      t.string :video
 
       t.timestamps
     end
