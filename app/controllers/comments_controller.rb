@@ -13,6 +13,11 @@ class CommentsController < ApplicationController
     render json: comment, status: :created
   end
 
+  def update
+    comment = find_comment
+    comment.update!(comment_params)
+    render json: comment, status: :ok
+  end
 
 
   private
