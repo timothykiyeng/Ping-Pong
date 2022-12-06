@@ -19,6 +19,12 @@ class CommentsController < ApplicationController
     render json: comment, status: :ok
   end
 
+  def destroy
+    comment = find_comment
+    comment.destroy
+    head :no_content
+  end
+
 
   private
 
