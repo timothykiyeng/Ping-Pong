@@ -31,6 +31,10 @@ function App() {
 
 
 
+  if (!user) return <Login onLogin={setUser} />;
+
+
+
   return (
     <h1>Let's Build this</h1>
   );
