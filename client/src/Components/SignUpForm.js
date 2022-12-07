@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Button } from './Styles'
+import { Button, Error } from './Styles'
 
 function SignUpForm( {onLogin} ){
 
