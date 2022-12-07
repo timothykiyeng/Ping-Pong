@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-//import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Login from "./Login";
 
@@ -29,9 +29,21 @@ function App() {
     setUser(null);
   }
 
-  function handleFindVideoData(yogaVideoData){
-    setVideoData(yogaVideoData);
+  function handleFindVideoData(data){
+    setVideoData(data);
   }
+
+  function handleUpdateItem(updatedItemObj) {
+    const editedItems = skillSet.map((item) => {
+      if (item.id === updatedItemObj.id) {
+        return updatedItemObj;
+      } else {
+        return item;
+      }
+    });
+    setSkillSet(editedItems);
+  }
+
 
   if (!user) return <Login onLogin={setUser} />;
 
@@ -39,6 +51,16 @@ function App() {
     <>
       <div className="App">
         <Header user={user} setUser={setUser} onLogout={handleLogout} />
+        <Routes>
+          <Route exact path="*" element={
+            <MainContainer
+              yogaData={yogaData}
+              handleUpdateItem={handleUpdateItem}
+              videoData={videoData}
+              handleFindVideoData={handleFindVideoData}
+              user={user}
+              />}/>
+        </Routes>
       </div>
     </>
   );
