@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CommentBubble from './CommentBubble';
 
 function CommentList( {user} ) {
 
@@ -85,6 +86,43 @@ function CommentList( {user} ) {
         function handleClickLess() {
               setDataIndex((dataIndex) => (dataIndex - 3) % commentData.length);
             }
+
+            return (
+                <>
+                <div className="comment-page-title">
+                  <p>Your Thoughts?</p>
+                </div>
+                <div className="comment-page-intro">
+                  <p>Join others in sharing your your ping pong related experiences on this platform.<br/>Whether table tennis is something you've never tried before,<br/> take your time and check out what other players think.</p>
+                </div>
+                <div className="comments-div">{commentList}</div>
+                <div className="float-container">
+                      <div className="next-container">
+                            <button
+                            className="back-button"
+                            onClick={handleClickLess}><i class="gg-chevron-left"></i></button>
+                      </div>
+                      <div className="next-container">
+                          <button
+                            className="next-button"
+                            onClick={handleClickMore}><i class="gg-chevron-right"></i></button>
+                        </div>
+                    </div>
+                <form className="create-comment" onSubmit={handleSubmit} >
+                  <label className="comment-label" htmlFor="comment">New Comment: </label>
+                  <input
+                    className="comment-input"
+                    name="comment"
+                    type="text"
+                    placeholder="Share with us your thoughts..."
+                    value={description}
+                    onChange={handleCommentChange}
+                    ></input>
+                    <input className="submit-button" type="submit" value="Post" />
+                </form>
+
+                </>
+              )
 
 
 }
