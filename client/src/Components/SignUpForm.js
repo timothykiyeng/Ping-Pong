@@ -34,6 +34,51 @@ function SignUpForm( {onLogin} ){
         });
       }
 
+      return (
+        <form onSubmit={handleSubmit}>
+          <FormField>
+            <Label htmlFor="username">Username</Label>
+            <Input
+              type="text"
+              id="username"
+              autoComplete="off"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </FormField>
+          <FormField>
+            <Label htmlFor="password">Password</Label>
+            <Input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
+            />
+          </FormField>
+
+          <FormField>
+            <Label htmlFor="password-confirmation">Confirm Password</Label>
+            <Input
+              type="password-confirmation"
+              id="password-confirmation"
+              value={password}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              autoComplete="current-password"
+            />
+          </FormField>
+
+          <FormField>
+            <Button type="submit">{isLoading ? "Loading..." : "Sign Up"}</Button>
+          </FormField>
+          <FormField>
+            {errors.map((err) => (
+              <Error key={err}>{err}</Error>
+            ))}
+          </FormField>
+        </form>
+      );
+
 
 }
 
