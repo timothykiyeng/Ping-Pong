@@ -9,9 +9,13 @@ function CommentList( {user} ) {
 
     useEffect(() => {
         fetch("/comments")
-        .then((r) => r.json())
+        .then((res) => res.json())
         .then((comments) => { setCommentData(comments) });
     }, []);
+
+    function addNewComment(newComment){
+        setCommentData((prevState) => [...prevState, newComment])
+      }
 
 }
 
