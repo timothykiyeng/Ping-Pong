@@ -7,7 +7,7 @@ import Login from "./Login";
 function App() {
   const [user, setUser] = useState(null);
   const [skillSet, setSkillSet] = useState([]);
-  //const [videoData, setVideoData] = useState([]);
+  const [videoData, setVideoData] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:4000/me").then((response) => {
@@ -27,6 +27,10 @@ function App() {
 
   function handleLogout() {
     setUser(null);
+  }
+
+  function handleFindVideoData(yogaVideoData){
+    setVideoData(yogaVideoData);
   }
 
   if (!user) return <Login onLogin={setUser} />;
