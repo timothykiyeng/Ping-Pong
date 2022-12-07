@@ -4,12 +4,11 @@ function LoginForm({ onLogin }) {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("")
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     function handleSubmit(e) {
-      
+
         e.preventDefault();
         setIsLoading(true);
 
@@ -18,7 +17,7 @@ function LoginForm({ onLogin }) {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ username, password, confirmPassword }),
+          body: JSON.stringify({ username, password }),
         })
           .then((r) => {
             setIsLoading(false);
@@ -51,17 +50,6 @@ function LoginForm({ onLogin }) {
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-            />
-          </FormField>
-
-          <FormField>
-            <Label htmlFor="confirm-password">Confirm Password</Label>
-            <Input
-              type="confirm-password"
-              id="confirm-password"
-              autoComplete="current-password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </FormField>
 
