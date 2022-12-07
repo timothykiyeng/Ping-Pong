@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import { Route, Routes } from "react-router-dom";
+//import { Route, Routes } from "react-router-dom";
 import Header from './Components/Header';
 import Login from './Components/Login'
 
@@ -36,7 +36,12 @@ function App() {
 
 
   return (
-    <h1>Let's Build this</h1>
+    <>
+    <div className="App">
+      <Header user={user} setUser={setUser} onLogout={handleLogout} />
+
+    </div>
+    </>
   );
 }
 
