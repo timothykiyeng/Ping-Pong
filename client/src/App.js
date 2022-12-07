@@ -25,6 +25,11 @@ function App() {
       .then((skill) => {setSkillSet(skill)});
   }, []);
 
+  function handleLogout() {
+    setUser(null);
+  }
+
+
 
   return (
     <h1>Let's Build this</h1>
