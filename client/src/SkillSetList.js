@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SkillItem from './SkillItem';
 
 
 export default function SkillSetList({ skillSet, clicked, setClicked, handleUpdateItem, handleFindVideoData, handleFindId }) {
