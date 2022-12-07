@@ -60,7 +60,20 @@ function CommentList( {user} ) {
       function handleShowComment(singleComment){
         setShowComment(singleComment)
       }
-    
+
+      const commentList = [...commentData]
+      .slice(dataIndex, dataIndex + 3)
+      .map((comment) =>
+            <CommentBubble
+              key={comment.id}
+              id={comment.id}
+              comment={comment}
+              handleDeleteComment={handleDeleteComment}
+              handleUpdateComment={handleUpdateComment}
+              handleShowComment={handleShowComment}
+            />
+        ) 
+
 
 }
 
