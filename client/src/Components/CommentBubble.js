@@ -7,5 +7,15 @@ function CommentBubble( {id, comment, handleDeleteComment, handleUpdateComment} 
     const [isEditing, setIsEditing] = useState(false);
     const { description, user } = comment
 
+    function handleDelete(){
+        fetch(`/comments/${id}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        handleDeleteComment(id)
+      }
+
 
 }
