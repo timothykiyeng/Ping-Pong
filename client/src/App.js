@@ -1,12 +1,10 @@
-
-import './App.css';
-import React, {useEffect, useState} from 'react';
+import "./App.css";
+import React, { useEffect, useState } from "react";
 //import { Route, Routes } from "react-router-dom";
-import Header from './Components/Header';
-import Login from './Components/Login'
+import Header from "./Header";
+import Login from "./Login";
 
 function App() {
-
   const [user, setUser] = useState(null);
   const [skillSet, setSkillSet] = useState([]);
   //const [videoData, setVideoData] = useState([]);
@@ -22,25 +20,22 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:4000/skill_sets")
       .then((r) => r.json())
-      .then((skill) => {setSkillSet(skill)});
+      .then((skill) => {
+        setSkillSet(skill);
+      });
   }, []);
 
   function handleLogout() {
     setUser(null);
   }
 
-
-
   if (!user) return <Login onLogin={setUser} />;
-
-
 
   return (
     <>
-    <div className="App">
-      <Header user={user} setUser={setUser} onLogout={handleLogout} />
-
-    </div>
+      <div className="App">
+        <Header user={user} setUser={setUser} onLogout={handleLogout} />
+      </div>
     </>
   );
 }
