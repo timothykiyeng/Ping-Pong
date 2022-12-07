@@ -5,7 +5,7 @@ export default function SkillSetList({ skillSet, clicked, setClicked, handleUpda
 
   const [dataIndex, setDataIndex] = useState(0)
 
-  const yogaItems = [...skillSet]
+  const skillSetItems = [...skillSet]
     .slice(dataIndex, dataIndex + 3)
 
     .map((skill) =>
@@ -36,7 +36,7 @@ export default function SkillSetList({ skillSet, clicked, setClicked, handleUpda
       <p>No matter where you currently are on your table tennis journey, you’re just a few clicks away from figuring out how to take your game to the next level.<br/>Explore different table tennis techniques with instructional videos to help guide you on your journey.</p>
     </div>
     <div className="skill-list">
-      <div className="skill-container">{yogaItems}</div>
+      <div className="skill-container">{skillSetItems}</div>
       <div className="float-container">
           <div className="next-container">
                 <button
