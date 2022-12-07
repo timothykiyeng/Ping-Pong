@@ -72,7 +72,19 @@ function CommentList( {user} ) {
               handleUpdateComment={handleUpdateComment}
               handleShowComment={handleShowComment}
             />
-        ) 
+        )
+
+        function handleCommentChange(e){
+            setDescription(e.target.value)
+            }
+
+        function handleClickMore() {
+                setDataIndex((dataIndex) => (dataIndex + 3) % commentData.length);
+              }
+
+        function handleClickLess() {
+              setDataIndex((dataIndex) => (dataIndex - 3) % commentData.length);
+            }
 
 
 }
