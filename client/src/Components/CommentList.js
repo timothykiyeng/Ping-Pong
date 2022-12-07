@@ -17,6 +17,17 @@ function CommentList( {user} ) {
         setCommentData((prevState) => [...prevState, newComment])
       }
 
+      function handleDeleteComment(commentToDelete){
+        const updatedComments = commentData.filter((comment) => {
+          if (comment.id !== commentToDelete.id) {
+            return comment
+          } else {
+            return null
+          }
+        });
+        setCommentData(updatedComments);
+      }
+
 }
 
 export default CommentList
