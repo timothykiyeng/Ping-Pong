@@ -19,6 +19,12 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    fetch("http://localhost:4000/skill_sets")
+      .then((r) => r.json())
+      .then((skill) => {setSkillSet(skill)});
+  }, []);
+
 
   return (
     <h1>Let's Build this</h1>
