@@ -17,5 +17,34 @@ function CommentBubble( {id, comment, handleDeleteComment, handleUpdateComment} 
         handleDeleteComment(id)
       }
 
+      return (
+        <div className="bubble">
+          {isEditing ? (
+           <EditComment
+             id={id}
+             comment={comment}
+             setIsEditing={setIsEditing}
+             handleUpdateComment={handleUpdateComment}
+           />
+          ) : (
+            <div className="comment-container">
+              <button className="delete-button" onClick={handleDelete}>🗑️</button>
+              <button className="edit-btn" onClick={() => setIsEditing((isEditing) => !isEditing)}>
+                 <span role="img" aria-label="edit">
+                   ✏️
+                 </span>
+               </button>
+               <br/>
+              <h3 className="comment">{description}
+              <p className="username">- {user.username}</p>
+              <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link></h3>
+              </div>
+          )
+         }
+         </div>
+     )
+
 
 }
+
+export default CommentBubble
