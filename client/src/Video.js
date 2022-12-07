@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles";
 import { Link } from 'react-router-dom';
 import YoutubeEmbed from "./YoutubeEmbed";
 

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Login from "./Login";
+import MainContainer from './MainContainer';
 
 function App() {
   const [user, setUser] = useState(null);
