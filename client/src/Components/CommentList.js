@@ -28,6 +28,17 @@ function CommentList( {user} ) {
         setCommentData(updatedComments);
       }
 
+      function handleUpdateComment(updatedCommentObj) {
+        const editedComments = commentData.map((comment) => {
+          if (comment.id === updatedCommentObj.id) {
+            return updatedCommentObj;
+          } else {
+            return comment;
+          }
+        });
+        setCommentData(editedComments);
+      }
+
 }
 
 export default CommentList
