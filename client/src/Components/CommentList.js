@@ -39,6 +39,24 @@ function CommentList( {user} ) {
         setCommentData(editedComments);
       }
 
+      function handleSubmit(e){
+        e.preventDefault();
+        const newCommentObj = {
+            description: description,
+            user_id: user.id,
+            skill_set_id: 1
+        }
+              fetch("/comments",{
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newCommentObj)
+              })
+              .then(response => response.json())
+              .then((data) => addNewComment(data))
+              setDescription("");
+              console.log(newCommentObj);
+      }
+
 }
 
 export default CommentList
