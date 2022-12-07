@@ -54,7 +54,7 @@ function App() {
         <Routes>
           <Route exact path="*" element={
             <MainContainer
-              yogaData={yogaData}
+              skillSet={skillSet}
               handleUpdateItem={handleUpdateItem}
               videoData={videoData}
               handleFindVideoData={handleFindVideoData}
