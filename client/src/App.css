@@ -123,3 +123,25 @@
    background-color: #48cae4;
    margin: 0 auto;
  }
+
+ .nav-button{
+  text-align: center;
+  background-color: #caf0f8;
+  font-weight: bold;
+  border-radius: 15px;
+  color: #0096C7;
+  box-shadow: 2px 2px #03045e;
+  text-shadow: 2px 2px #ffffff;
+  font-size: 25px;
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  padding-bottom: 0 auto;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+.nav-button:hover{
+  box-shadow: 5px 5px #03045e;
+}
+
