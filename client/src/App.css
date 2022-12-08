@@ -145,3 +145,24 @@
   box-shadow: 5px 5px #03045e;
 }
 
+.logout-button{
+  text-align: center;
+  background-color: #03045e;
+  font-weight: bold;
+  border-radius: 15px;
+  color: #ffffff;
+  box-shadow: 2px 2px #ffffff;
+  text-shadow: 1px 1px #737ab9;
+  font-size: 25px;
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  padding-bottom: 0 auto;
+  text-decoration: none;
+  border: none;
+  transition: all .2s ease-in-out;
+}
+.logout-button:hover{
+  box-shadow: 5px 5px #ffffff;
+}
