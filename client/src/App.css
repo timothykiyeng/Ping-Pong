@@ -163,6 +163,18 @@
   border: none;
   transition: all .2s ease-in-out;
 }
+
 .logout-button:hover{
   box-shadow: 5px 5px #ffffff;
+}
+
+.welcome{
+  font-family: 'Cookie', cursive;
+  color: #ffffff;
+  text-shadow: 1px 1px #03045e;
+  font-size: 40px;
+  text-align: left;
+  padding-top: 10px;
+  margin: 0 auto;
+  margin-left: 50px;
 }
