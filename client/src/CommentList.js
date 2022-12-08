@@ -105,11 +105,11 @@ function CommentList( {user} ) {
                       <div className="next-container">
                           <button
                             className="next-button"
-                            onClick={handleClickMore}><i class="gg-chevron-right"></i></button>
+                            onClick={handleClickMore}><i className="gg-chevron-right"></i></button>
                         </div>
                     </div>
                 <form className="create-comment" onSubmit={handleSubmit} >
-                  <label className="comment-label" htmlFor="comment">New Comment: </label>
+                  <label className="comment-label" htmlFor="comment"> New Comment: </label>
                   <input
                     className="comment-input"
                     name="comment"

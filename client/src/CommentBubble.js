@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function CommentBubble( {id, comment, handleDeleteComment, handleUpdateComment} ){
 
     const [isEditing, setIsEditing] = useState(false);
-    const { description, user } = comment
+    const { description, username } = comment
 
     function handleDelete(){
         fetch(`/comments/${id}`, {
@@ -36,7 +36,7 @@ function CommentBubble( {id, comment, handleDeleteComment, handleUpdateComment} 
                </button>
                <br/>
               <h3 className="comment">{description}
-              <p className="username">- {user.username}</p>
+              <p className="username">- {username}</p>
               <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link></h3>
               </div>
           )

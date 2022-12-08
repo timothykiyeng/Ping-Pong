@@ -11,15 +11,20 @@ function Navbar ( {user, setUser} ) {
         });
       }
 
+      //const navigate = useNavigate();
+
       return (
         <>
            <div className="header-background">
               <div>
               <p className="welcome">Welcome, {user.username}!</p>
-              <button onClick={handleLogoutOnClick} className="logout-button">Logout</button>
+              <button onClick={handleLogoutOnClick} className="logout-button"> Logout </button>
               </div>
-              <Link exact to="/comments" className="nav-button"> Your Thoughts? </Link>
-              <Link exact to="*" className="nav-button"> Home </Link>
+        
+              <Link to="/comments" className="nav-button"> Your Thoughts? </Link>
+              <Link to="*" className="nav-button"> Home </Link>
+
+
           </div>
       </>
     )

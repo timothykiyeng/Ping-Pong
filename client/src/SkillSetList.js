@@ -2,22 +2,21 @@ import React, { useState } from 'react';
 import SkillItem from './SkillItem';
 
 
-export default function SkillSetList({ skillSet, clicked, setClicked, handleUpdateItem, handleFindVideoData, handleFindId }) {
+function SkillSetList({ skillSet, clicked, setClicked, handleUpdateItem, handleFindVideoData}) {
 
-  const [dataIndex, setDataIndex] = useState(0)
+const [dataIndex, setDataIndex] = useState(0)
 
   const skillSetItems = [...skillSet]
     .slice(dataIndex, dataIndex + 3)
 
     .map((skill) =>
     <SkillItem
-      key={skill.id}
-      skill={skill}
-      handleUpdateItem={handleUpdateItem}
-      clicked={clicked}
-      setClicked={setClicked}
-      handleFindVideoData={handleFindVideoData}
-      handleFindId={handleFindId}
+    key={skill.id}
+    skill={skill}
+    handleUpdateItem={handleUpdateItem}
+    clicked={clicked}
+    setClicked={setClicked}
+    handleFindVideoData={handleFindVideoData}
     />
   )
 
@@ -42,15 +41,16 @@ export default function SkillSetList({ skillSet, clicked, setClicked, handleUpda
           <div className="next-container">
                 <button
                 className="back-button"
-                onClick={handleClickLess}><i class="gg-chevron-left"></i></button>
+                onClick={handleClickLess}><i className="gg-chevron-left"></i></button>
           </div>
           <div className="next-container">
               <button
                 className="next-button"
-                onClick={handleClickMore}><i class="gg-chevron-right"></i></button>
+                onClick={handleClickMore}><i className="gg-chevron-right"></i></button>
             </div>
         </div>
     </div>
    </>
   )
 }
+export default SkillSetList

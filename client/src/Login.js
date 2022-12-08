@@ -13,7 +13,8 @@ function Login({ onLogin }) {
         <Logo>Home of Ping Pong</Logo>
         <h2 className="tagline">
           Welcome to Home of Ping Pong. Learn to play table tennis and level up
-          your game 🏓 🏓 .
+          your game
+          <br/> 🏓 🏓 🏓
         </h2>
         {showLogin ? (
           <>
