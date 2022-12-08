@@ -291,3 +291,41 @@
     /* align-items: center; */
 
   }
+
+  .video-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .video-div{
+    width: 60%;
+    height: 60%;
+    margin-top: 250px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 50%;
+    margin-left: 19%;
+  }
+
+  .video-title {
+    color: #03045E;
+    padding-left: 15%;
+    padding-top: 10%;
+    padding-right: 15%;
+    margin: 0;
+
+  }
+
+  .video-category {
+    color: #03045E;
+    text-align: center;
+  }
+
+  .video-description {
+    color: #03045E;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 15%;
+  }
