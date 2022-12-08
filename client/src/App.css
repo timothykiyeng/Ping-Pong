@@ -108,3 +108,18 @@
   right: 6px;
   top: 4px
  }
+
+ .header {
+  font-family: 'Cookie', cursive;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #03045e;
+  font-size: 100px;
+  text-align: center;
+  padding-top: 25px;
+  margin: 0 auto;
+ }
+ .header-background{
+   height: 150px;
+   background-color: #48cae4;
+   margin: 0 auto;
+ }
