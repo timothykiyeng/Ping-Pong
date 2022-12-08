@@ -232,3 +232,22 @@
   .skill-item:hover{
     box-shadow: 5px 5px #03045e;
   }
+
+  .like-button{
+    border: none;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    height: 50%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    text-align: center;
+    margin-bottom: 10%;
+    transition: .5s;
+  }
+
+  .like-button:hover{
+    background-color:#ff7eb2;
+    box-shadow: 0px 0px 2px #ffffff;
+  }
