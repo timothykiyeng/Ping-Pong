@@ -497,3 +497,21 @@
   .comment-input:hover{
     box-shadow: 0px 0px 10px #00B4D8;
   }
+
+  .submit-button{
+    color:#edfafd;
+    background-color: #0077b6;
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+    align-self: center;
+    transition: .5s;
+    padding: 10px
+  }
+
+  .submit-button:hover{
+    background-color:#edfafd;
+    color: #0077b6;
+    box-shadow: 0px 0px 5px #03045e;
+  }
