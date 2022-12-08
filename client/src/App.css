@@ -464,3 +464,18 @@
     color: #0077b6;
     box-shadow: 0px 0px 5px #03045e;
   }
+
+  .create-comment{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    color:#edfafd;
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+    align-self: center;
+    transition: .5s;
+    padding-bottom: 70px;
+  }
