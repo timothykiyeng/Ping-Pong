@@ -182,3 +182,15 @@
 .skill-list{
   margin-top: 60px;
 }
+
+.skill-card-title {
+  color: #03045E;
+}
+
+  .skill-card-category {
+    color: #03045E;
+  }
+
+  .skill-card-description {
+    color: #03045E;
+  }
