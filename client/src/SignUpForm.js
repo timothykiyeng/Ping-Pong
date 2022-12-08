@@ -88,3 +88,12 @@ const FormField = styled.div`
     opacity: 0.6;
   }
 `;
+
+const Label = styled.label`
+  color: white;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+`;
+
