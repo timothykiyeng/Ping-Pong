@@ -6,3 +6,12 @@
   color: white;
   text-align: center;
 }
+
+.login-form{
+  background-image: url("./styles/trial_1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 100px;
+  padding: 100px;
+  padding-bottom: 100px;
+}
