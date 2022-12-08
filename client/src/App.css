@@ -329,3 +329,114 @@
     padding-right: 15%;
     padding-bottom: 15%;
   }
+
+  .comment-page-title {
+    padding-top: 150px;
+    text-align: center;
+    font-size: 35px;
+    color: #03045e;
+  }
+
+  .comment-page-intro {
+    padding-top: 10px;
+    margin-left: 22%;
+    margin-right: 22%;
+    text-align: center;
+    font-size: 17px;
+    color: #03045e;
+  }
+
+  .comment {
+    background-color: rgb(194, 243, 255);
+    color: #03045e;
+    text-shadow: 1px 1px 0px white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .bubble {
+   margin: 3%;
+  }
+
+  .full-comment-button {
+    background-color: #edfafd;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    color:#03045e;
+    font-size: 15px;
+  }
+
+  .full-comment-button:hover{
+    text-shadow: 0px 0px 5px #00b4d8;
+  }
+  .comments-div {
+    margin-bottom: 0 auto;
+    margin-top: 50px;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+
+  .delete-button{
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+    float: right;
+    border-radius: 50%;
+    border: none;
+    transition: .3s;
+    color: transparent;
+    background-color: transparent;
+    transition: .3s;
+  }
+
+  .delete-button:hover{
+    color:rgba(0, 0, 0, 0.644);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 3px #000000;
+  }
+
+  /* edit comment */
+
+
+  .edit-btn{
+    display: hidden;
+    width: 30px;
+    height: 30px;
+    float: left;
+    border-radius: 50%;
+    border: none;
+    color: transparent;
+    background-color: transparent;
+    transition: .3s;
+  }
+  .edit-btn:hover{
+    color:rgba(0, 0, 0, 0.644);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 3px #183E4E;
+  }
+
+  .edit-comment-input{
+    background-color: rgb(194, 243, 255);
+    color: 03045e;
+    text-shadow: 1px 1px 0px #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+    transition: .4s;
+  }
+
+  .edit-comment-input:hover{
+    box-shadow: 0px 0px 10px #00B4D8;
+  }
+
+  .edit-comment {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
