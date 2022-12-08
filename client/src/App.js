@@ -1,9 +1,9 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import Login from "./Login";
-import MainContainer from './MainContainer';
+import MainContainer from "./MainContainer";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,7 +30,7 @@ function App() {
     setUser(null);
   }
 
-  function handleFindVideoData(data){
+  function handleFindVideoData(data) {
     setVideoData(data);
   }
 
@@ -45,23 +45,27 @@ function App() {
     setSkillSet(editedItems);
   }
 
-
   if (!user) return <Login onLogin={setUser} />;
 
   return (
     <>
       <div className="App">
         <Header user={user} setUser={setUser} onLogout={handleLogout} />
-        <Routes>
-          <Route exact path="*" element={
-            <MainContainer
-              skillSet={skillSet}
-              handleUpdateItem={handleUpdateItem}
-              videoData={videoData}
-              handleFindVideoData={handleFindVideoData}
-              user={user}
-              />}/>
-        </Routes>
+        <Switch>
+          <Route
+            exact
+            path="*"
+            element={
+              <MainContainer
+                skillSet={skillSet}
+                handleUpdateItem={handleUpdateItem}
+                videoData={videoData}
+                handleFindVideoData={handleFindVideoData}
+                user={user}
+              />
+            }
+          />
+        </Switch>
       </div>
     </>
   );
