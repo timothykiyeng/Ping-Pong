@@ -58,8 +58,8 @@ function CommentList( {user} ) {
               console.log(newCommentObj);
       }
 
-      function handleShowComment(singleComment){
-        setShowComment(singleComment)
+      function handleShowComment(showComment){
+        setShowComment(showComment)
       }
 
       const commentList = [...commentData]
