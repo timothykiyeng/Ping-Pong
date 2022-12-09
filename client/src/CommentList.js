@@ -100,7 +100,7 @@ function CommentList( {user} ) {
                       <div className="next-container">
                             <button
                             className="back-button"
-                            onClick={handleClickLess}><i class="gg-chevron-left"></i></button>
+                            onClick={handleClickLess}><i className="gg-chevron-left"></i></button>
                       </div>
                       <div className="next-container">
                           <button
