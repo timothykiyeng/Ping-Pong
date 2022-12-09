@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "/comments", to: "comments#index"
   post "/comments", to: "comments#create"
-  update "/comments", to: "comments#update"
+  patch "/comments", to: "comments#update"
   delete "/comments", to: "comments#destroy"
 
   post "/signup", to: "users#create"
