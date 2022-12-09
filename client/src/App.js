@@ -11,7 +11,7 @@ function App() {
   const [videoData, setVideoData] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/me").then((response) => {
+    fetch("http://localhost:3000/me").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
       }
@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/skill_sets")
+    fetch("http://localhost:3000/skill_sets")
       .then((r) => r.json())
       .then((skillSet) => {
         setSkillSet(skillSet);
