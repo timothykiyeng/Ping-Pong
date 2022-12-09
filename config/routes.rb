@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   resources :comments
-  resources :skill_sets, only: [:index, :show, :update]
+  resources :skill_sets
+
+  get "/skill_sets", to: "skill_sets#index"
+  get "/skill_sets", to: "skill_sets#show"
+
+  get "/comments", to: "comments#index"
+  post "/comments", to: "comments#create"
+  update "/comments", to: "comments#update"
+  delete "/comments", to: "comments#destroy"
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"

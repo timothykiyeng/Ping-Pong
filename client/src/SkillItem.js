@@ -14,7 +14,7 @@ function SkillItem({ skill, handleUpdateItem, handleFindVideoData }) {
   function handleClick(e) {
     e.preventDefault();
 
-    fetch(`http://localhost:4000/skill_sets/${id}`, {
+    fetch(`/skill_sets/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
