@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: @current_user
+    user = User.find_by(id: session[:user_id])
+    render json: user
   end
 
   private
@@ -16,5 +17,9 @@ class UsersController < ApplicationController
   def user_params
     params.permit(:username, :password, :password_confirmation)
   end
+
+  def authorize
+    return render json: {error: "Not authorized"}, status: :unauthorized unless session.include? :user_id
+   end
 
 end
