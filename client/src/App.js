@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Login from "./Login";
 import MainContainer from "./MainContainer";
@@ -22,6 +22,7 @@ function App() {
     fetch("/skill_sets")
       .then((r) => r.json())
       .then((skill) => {
+        console.log(skill)
         setSkillSet(skill);
       });
   }, []);
@@ -51,7 +52,7 @@ function App() {
     <>
       <div className="App">
         <Header user={user} setUser={setUser} onLogout={handleLogout} />
-        <Switch>
+        <Routes>
           <Route
             exact
             path="*"
@@ -65,7 +66,7 @@ function App() {
               />
             }
           />
-        </Switch>
+        </Routes>
       </div>
     </>
   );

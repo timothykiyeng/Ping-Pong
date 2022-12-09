@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CommentList from "./CommentList";
 import ShowComment from "./ShowComent";
-import { Route, Switch } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Video from "./Video";
 import SkillSetList from "./SkillSetList";
 
@@ -16,10 +16,9 @@ export default function MainContainer({
 
   return (
     <div>
-      <Switch>
+      <Routes>
         <Route
-          exact
-          path="/video"
+          exact path="/video"
           element={
             <Video
               clicked={clicked}
@@ -32,8 +31,7 @@ export default function MainContainer({
         <Route exact path="/comments" element={<CommentList user={user} />} />
         <Route exact path="/comments/:id" element={<ShowComment />} />
         <Route
-          exact
-          path="*"
+          exact path="*"
           element={
             <SkillSetList
               skillSet={skillSet}
@@ -44,7 +42,7 @@ export default function MainContainer({
             />
           }
         />
-      </Switch>
+      </Routes>
     </div>
   );
 }

@@ -12,7 +12,7 @@ function CommentList( {user} ) {
         fetch("/comments")
         .then((res) => res.json())
         .then((comments) => { setCommentData(comments) });
-    }, []);
+    }, [showComment]);
 
     function addNewComment(newComment){
         setCommentData((prevState) => [...prevState, newComment])

@@ -3,27 +3,25 @@ import { Link } from "react-router-dom";
 
 function SkillItem({ skill, handleUpdateItem, handleFindVideoData }) {
   const {
-    id,
     title,
     image,
     category,
     description,
-    is_favorite: isFavorite,
   } = skill;
 
-  function handleClick(e) {
-    e.preventDefault();
+  // function handleClick(e) {
+  //   e.preventDefault();
 
-    fetch(`/skill_sets/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ is_favorite: !isFavorite }),
-    })
-      .then((r) => r.json())
-      .then((updatedItem) => handleUpdateItem(updatedItem));
-  }
+  //   fetch(`/skill_sets/${id}`, {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ is_favorite: !isFavorite }),
+  //   })
+  //     .then((r) => r.json())
+  //     .then((updatedItem) => handleUpdateItem(updatedItem));
+  // }
 
   function handleItemClick() {
     handleFindVideoData(skill);
