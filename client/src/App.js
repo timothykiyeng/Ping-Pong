@@ -21,8 +21,8 @@ function App() {
   useEffect(() => {
     fetch("/skill_sets")
       .then((r) => r.json())
-      .then((skillSet) => {
-        setSkillSet(skillSet);
+      .then((skill) => {
+        setSkillSet(skill);
       });
   }, []);
 
