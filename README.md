@@ -30,7 +30,7 @@
 - Ruby on Rails
 
 ## Known Bugs
-- None at the moment, but open to any suggestions.
+- On sign up, a user has to refresh the page to be redirected to the home page - working on it.
 
 ## Setup instructions
 
