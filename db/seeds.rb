@@ -3,7 +3,7 @@ User.destroy_all
 SkillSet.destroy_all
 Comment.destroy_all
 
-puts "Seeding........."
+puts "Seeding data........."
 user1 = User.create(username: 'Rose', password: 'apple')
 user2 = User.create(username: 'Lionel', password: 'banana')
 user3 = User.create(username: 'Timothy', password: 'banana')
