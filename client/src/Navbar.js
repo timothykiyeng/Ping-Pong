@@ -20,8 +20,8 @@ function Navbar ( {user, setUser} ) {
               <p className="welcome">Welcome, {user.username}!</p>
               <button onClick={handleLogoutOnClick} className="logout-button"> Logout </button>
               </div>
-              <Link to="/comments" className="nav-button"> Your Thoughts? </Link>
-              <Link to="*" className="nav-button"> Home </Link>
+              <Link exact to="/comments" className="nav-button"> Your Thoughts? </Link>
+              <Link exact to="*" className="nav-button"> Home </Link>
 
           </div>
       </>
