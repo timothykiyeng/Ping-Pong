@@ -53,8 +53,7 @@ function CommentList( {user} ) {
         e.preventDefault();
         const newCommentObj = {
             description: description,
-            user_id: user.id,
-            skill_set_id: 1
+            user_id: user.id
         }
               fetch("/comments",{
                 method: 'POST',
