@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function ShowComment() {
-  const [currentComment, setCurrentComment] = useState("");
+  const [currentComment, setCurrentComment] = useState('');
   const { id } = useParams();
 
   useEffect(() => {
