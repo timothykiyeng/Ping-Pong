@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/skill_sets", to: "skill_sets#show"
 
   get "/comments", to: "comments#index"
+  get "/comments", to: "comments#show"
   post "/comments", to: "comments#create"
   patch "/comments", to: "comments#update"
   delete "/comments", to: "comments#destroy"

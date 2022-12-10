@@ -8,11 +8,20 @@ function CommentList( {user} ) {
     const [dataIndex, setDataIndex] = useState(0)
     const [showComment, setShowComment] = useState("")
 
+
     useEffect(() => {
         fetch("/comments")
         .then((res) => res.json())
         .then((comments) => { setCommentData(comments) });
-    }, [showComment]);
+
+
+    }, []);
+
+
+    function handleShowComment(singleComment){
+      setShowComment(singleComment)
+    }
+
 
     function addNewComment(newComment){
         setCommentData((prevState) => [...prevState, newComment])
@@ -58,9 +67,7 @@ function CommentList( {user} ) {
               console.log(newCommentObj);
       }
 
-      function handleShowComment(showComment){
-        setShowComment(showComment)
-      }
+
 
       const commentList = [...commentData]
       .slice(dataIndex, dataIndex + 3)
