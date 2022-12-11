@@ -62,7 +62,7 @@ function SignUpForm({ onLogin }) {
         <Input
           type="password"
           id="password"
-          value={password}
+          value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           autoComplete="current-password"
         />
