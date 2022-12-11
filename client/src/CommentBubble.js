@@ -37,7 +37,7 @@ function CommentBubble( {id, comment, handleDeleteComment, handleUpdateComment }
                <br/>
               <h3 className="comment">{description}
               <p className="username">- {username}</p>
-              <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link></h3>
+              <Link className="full-comment-button" exact to={`/comments/${id}`}>Full Comment</Link></h3>
               </div>
           )
          }
